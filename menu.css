@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px;
+}
+p {
+    font-weight: 300;
+    color: #fff;
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(./image/shape-5.png) ;
+}
+
+.titleText {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.titleText span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5;
+
+}
+
+header {
+    
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 05);
+}
+
+header.sticky {
+    background: #7a7878;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 05);
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header.sticky .navBar li a{
+    color: #111;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: #ff0157;
+}
+
+
+
+header .navBar {
+    position: relative;
+    display: flex;
+}
+
+header .navBar li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navBar li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;   
+}
+
+
+header .navBar li a:hover {
+    color: #ff0157;
+    transition: 0.5;
+} 
+
+
+#menu .content {
+    
+    
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#menu .content .box {
+    width: 100%;
+    margin: 30px !important;
+    padding: 10px;
+    border: 15px solid rgba(170, 170, 170, 0.034) !important;
+    display: flex;
+}
+
+
+
+#menu .content .box .imgBox {
+    position: relative;
+    width: 450px;
+    height: 300px;
+}
+
+#menu .content .box .imgBox img {
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:50px;
+}
+
+#menu .content .box .text {
+    padding: 15px 0 5px;
+}
+
+#menu .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+}
+
+.plat{
+    text-align: center;
+    width: 100%;
+}
+
+.commande {
+    font-size: 1rem;
+    color: #fff;
+    background-image: linear-gradient(to right,#ff0157,#ff0123);
+    display: inline-block;
+    
+    margin-top: 70%;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 150px;
+    border: none;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.commande > *{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.visible{
+    padding: 10px 50px;
+    width: 170px;
+}
+.invisible{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 10px 50px;
+}
+
+.commande:hover{
+    background-color: antiquewhite;
+    background-image: linear-gradient(to left,#ff0157,#ff0123);
+    cursor: pointer;
+}
+
+.commande:hover .visible{
+    transform: translateY(100%);
+}
+
+.commande:hover .invisible{
+    top: 0;
+}
+
+h3{
+    color: aliceblue;
+    font-size: 1.8rem;
+    padding: 5% 0;
+}
+
+
+
+
+/* responsive design section */
+
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }  
+
+    header .navBar {
+        display: none;
+    }     
+    
+    header .navBar.active{
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    } 
+
+    header .navBar li {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    header .navBar li a {
+        color: #111;
+        font-size: 1.6rem;
+    }
+
+    .menuToggle { 
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(image/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url(image/close.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+    }
+
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding: 20PX;
+    }
+
+
+    #menu .content {
+        margin-top: 20px;
+    }
+
+    #menu .content .box {
+        margin: 25px !important;
+        padding: 5px;
+    }
+
+    #menu .content .box .imgBox {
+        height: 265px;
+    }
+
+    .titleText {
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .title p {
+        text-align: center;
+    }
+
+    #menu .content {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 700px){
+    #menu .content .box{
+        display:block;
+    }
+
+    #menu .content .box .imgBox img{
+        position:relative;
+        width:280px;
+    }
+
+
+    .commande{
+        margin-top:0;
+        margin-left: 25%;
+    }
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}

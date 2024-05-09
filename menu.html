@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food.</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">Food<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navBar">
+            <li class=""><a href="./index.html" onclick="toggleMenu();" >Home</a></li>
+            <li class=""><a href="./contact.html" onclick="toggleMenu();" >Contact</a></li>
+        </ul>
+    </header>
+
+
+    <section>
+        <div class="title">
+            <h2 class="titleText">Our <span>M</span>enu</h2>
+       </div>
+    </section>
+
+
+    <section class="menu" id="menu">
+        
+        <div class="content">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="image/salads.jpg" alt="">
+                </div>
+                <div class="plat">
+                    <h3>Crisp Garden Harvest Salad</h3>
+                    <p><strong>Discover our refined gourmet salad,</strong> composed of a blend of <strong>fresh arugula,</strong> <strong>sweet figs,</strong> <strong>creamy goat cheese,</strong> and <strong>crunchy walnuts.</strong> Each bite offers an explosion of harmonious flavors, enhanced by a homemade raspberry vinaigrette for an unforgettable culinary experience.</p>
+                </div>
+                <div>
+                    <button class="commande">
+                        <span class="visible">
+                            order
+                        </span>
+                        <span class="invisible">260 DA</span>
+                    </button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <img src="image/shoup.jpg" alt="">
+                </div>
+                <div class="plat">
+                    <h3>Seasonal Herb Delight Soup</h3>
+                    <p><strong>Indulge in our delicious soup,</strong> prepared with love and care. It features a blend of <strong>seasonal vegetables,</strong> <strong>fresh herbs,</strong> <strong>fragrant spices,</strong> and a touch of <strong>fresh cream</strong> to make it velvety and smooth. Each spoonful will comfort you and awaken your taste buds.</p>
+                </div>
+                <div>
+                    <button class="commande">
+                        <span class="visible">
+                            order
+                        </span>
+                        <span class="invisible">500 DA</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBox">
+                    <img src="image/menu-03.jpg" alt="">
+                </div>
+                <div class="plat">
+                    <h3>Italian Pasta Paradise</h3>
+                    <p><strong>Discover our carefully prepared pasta,</strong> a blend of <strong>fresh pasta</strong> and <strong>homemade sauces</strong>. Every bite is a delight of flavors, a unique taste experience that will awaken your taste buds.</p>
+                </div>
+                <div>
+                    <button class="commande">
+                        <span class="visible">
+                            order
+                        </span>
+                        <span class="invisible">600 DA</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBox">
+                    <img src="image/menu6.jpg" alt="">
+                </div>
+                <div class="plat">
+                    <h3>Herbed Potato Delight</h3>
+                    <p><strong>Explore our gourmet dish</strong> featuring potatoes and fresh herbs, a bold fusion of flavors and textures. The <strong>creamy potatoes</strong> are delicately infused with a blend of <strong>fresh herbs</strong>, creating a symphony of tastes in every bite. Let yourself be carried away by this refined culinary experience, where each dish tells a story of terroir and innovation.</p>
+                </div>
+                <div>
+                    <button class="commande">
+                        <span class="visible">
+                            order
+                        </span>
+                        <span class="invisible">500 DA</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="image/image1.jpg" alt="">
+                </div>
+                <div class="plat">
+                    <h3>Savory Herb-Infused Steak</h3>
+                    <p><strong>Discover our gourmet steak,</strong> a carefully selected piece of meat cooked to perfection. Accompanied by a <strong>rich and creamy sauce,</strong> <strong>seasonal vegetables,</strong> and a touch of <strong>fresh herbs.</strong> Every bite transports you to a world of exquisite flavors.</p>
+                </div>
+                <div>
+                    <button class="commande">
+                        <span class="visible">
+                            order
+                        </span>
+                        <span class="invisible">1200 DA</span>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="image/image3.jpg" alt="">
+                    </div>
+                    <div class="plat">
+                        <h3>Grilled Gourmet Burger</h3>
+                        <p><strong>Savor our gourmet burger,</strong> a symphony of flavors nestled between two soft buns. Topped with <strong>perfectly grilled meat,</strong> <strong>melting cheese,</strong> <strong>fresh veggies,</strong> and a touch of <strong>homemade sauce.</strong> Every bite is a burst of culinary delight.</p>
+                    </div>
+                    <div>
+                        <button class="commande">
+                            <span class="visible">
+                                order
+                            </span>
+                            <span class="invisible">900 DA</span>
+                        </button>
+                    </div>
+                </div>
+    </section>
+
+
+
+
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navBar =  document.querySelector('.navBar');
+            menuToggle.classList.toggle('active');
+            navBar.classList.toggle('active');
+        }
+    </script> 
+
+</body>

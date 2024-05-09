@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food.</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">Food<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navBar">
+            <li class=""><a href="./index.html" onclick="toggleMenu();" >Home</a></li>
+            <li class=""><a href="./menu.html" onclick="toggleMenu();" >Menu</a></li>
+        </ul>
+    </header>
+
+    <section id="contact" >
+        <form action="" method="get">
+            <div class="title">
+                <h2 class="titleText"><span>C</span>ontact Us</h2>
+            </div>
+            <div class="contactForm">
+                <h3>Send Massage</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="inputBox">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <textarea type="text" placeholder="Write your openion"></textarea>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Send" placeholder="submit">
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+    <section id="testimonials" >
+        <div class="title white">
+            <h2 class="titleText"> <span>C</span>omments </h2>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="image/testi1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Un delice !</p>
+                    <h3>Samira Bensaïd </h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBox">
+                    <img src="image/testi3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Tres bon !</p>
+                    <h3> Leila Rahal</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navBar =  document.querySelector('.navBar');
+            menuToggle.classList.toggle('active');
+            navBar.classList.toggle('active');
+        }
+    </script> 
+
+</body>
